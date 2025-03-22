@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Trafficrules"/>
+        <attribute name="authors" value="shiva"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-22 03:52:32 PM"/>
+        <attribute name="created" value="c2hpdmE7REVTS1RPUC1CVjhQN0dQOzIwMjUtMDMtMjI7MDI6MTI6MDkgUE07Mjg5MA=="/>
+        <attribute name="edited" value="c2hpdmE7REVTS1RPUC1CVjhQN0dQOzIwMjUtMDMtMjI7MDM6NTI6MzIgUE07MjI7MzA1MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="money, units" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter no.of units.&quot;" newline="True"/>
+            <input variable="units"/>
+            <if expression="units&gt;400">
+                <then>
+                    <assign variable="money" expression="money+(units-400)*10"/>
+                    <assign variable="units" expression="400"/>
+                </then>
+                <else>
+                    <if expression="units&gt;300">
+                        <then>
+                            <assign variable="money" expression="money+money(units-300)*8"/>
+                            <assign variable="units" expression="300"/>
+                        </then>
+                        <else>
+                            <if expression="units&gt;200">
+                                <then>
+                                    <assign variable="money" expression="money+(units-200)*7"/>
+                                    <assign variable="units" expression="200"/>
+                                </then>
+                                <else>
+                                    <if expression="units&gt;100">
+                                        <then>
+                                            <assign variable="money" expression="money+(units-100)*6"/>
+                                            <assign variable="units" expression="100"/>
+                                        </then>
+                                        <else>
+                                            <if expression="units&lt;=100">
+                                                <then>
+                                                    <assign variable="money" expression="units*5"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="money" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
